@@ -2,7 +2,22 @@ from random import randint, shuffle
 
 
 def play(n, k, i):
-    """Monty's problem, with n doors and k reveals run for i iterations."""
+    """Monty's problem, with n doors and k reveals run for i iterations.
+    
+    Parameters
+    ---------
+    n : int
+        The number of doors
+    k : int
+        The number of reveals
+    i : int, optional
+        How many games to play, i.e. simulations to run
+    
+    Returns
+    (stay, change) : (list, list)
+        The binomial outcomes for when a contestant stays or changes,
+        1 --> win, 0 --> lose.
+    """
 
     if (n - k) < 2:
         raise ValueError("n must be 2 greater than k")

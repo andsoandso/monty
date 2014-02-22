@@ -3,7 +3,7 @@
 
 I wanted a better intuition for the proof.
 
-usage: python ./play.py n k [, i]
+usage: python ./monty.py n k [, i]
 
 n is the door number, k is the number of doors revealed, and i is 
 the number of simulations to run (optional, defaults to 10,000).
@@ -11,15 +11,15 @@ the number of simulations to run (optional, defaults to 10,000).
 For example, the canonoical version with three doors and 1 reveal 
 is run as
 
-$ python ./play.py 3 1
+$ python ./monty.py 3 1
 
 While the more intuitive 100 door version is run as
 
-$ python ./play.py 100 98
+$ python ./monty.py 100 98
 
 If you like to run only 10 iterations (which is very unreliable):
 
-$ python ./play.py 3 1 10
+$ python ./monty.py 3 1 10
 """
 import sys
 from monty.game import play, summarize

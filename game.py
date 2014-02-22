@@ -14,6 +14,7 @@ def play(n, k, i):
         How many games to play, i.e. simulations to run
     
     Returns
+    ------
     (stay, change) : (list, list)
         The binomial outcomes for when a contestant stays or changes,
         1 --> win, 0 --> lose.
@@ -58,6 +59,22 @@ def play(n, k, i):
 
 
 def summarize(n, k, i, stay, change):
+    """Summarize the results from playing the game.
+    
+    Parameters
+    ---------
+    n : int
+        The number of doors
+    k : int
+        The number of reveals
+    i : int, optional
+        How many games to play, i.e. simulations to run
+    stay : list
+        The binomial wins and losses if the contestant stayed
+    changed : list
+        The binomial wins and losses if the contestant changed
+    """
+    
     print("Of {0} doors {1} were opened.".format(n, k))
     print("Win percent with stay: {0}".format(sum(stay) / float(i)))
     print("Win percent with change: {0}".format(sum(change) / float(i)))

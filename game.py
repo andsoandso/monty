@@ -18,6 +18,15 @@ def play(n, k, i):
     (stay, change) : (list, list)
         The binomial outcomes for when a contestant stays or changes,
         1 --> win, 0 --> lose.
+        
+    Examples
+    -------
+	>>> n = 3; k = 1; i = 10000
+	>>> # 3 doors, 1 reveal, 10000 iterations
+	>>> summarize(n, k, i, *play(n, k, i))
+	Of 3 doors 1 were opened.
+	Win percent with stay: 0.3316
+	Win percent with change: 0.6684
     """
 
     if (n - k) < 2:
@@ -71,7 +80,7 @@ def summarize(n, k, i, stay, change):
         How many games to play, i.e. simulations to run
     stay : list
         The binomial wins and losses if the contestant stayed
-    changed : list
+    change: list
         The binomial wins and losses if the contestant changed
     """
     

@@ -76,8 +76,6 @@ def summarize(n, k, stay, change):
         The number of doors
     k : int
         The number of reveals
-    i : int, optional
-        How many games to play, i.e. simulations to run
     stay : list
         The binomial wins and losses if the contestant stayed
     change: list

@@ -11,7 +11,7 @@ Install to a location on your python path by
 	>>> n = 3; k = 1; i = 10000
 	>>> # 3 doors, 1 reveal, 10000 iterations
 	>>> summarize(n, k, i, *play(n, k, i))
-	Of 3 doors 1 were opened.
+	Of 3 doors 1 was opened.
 	Win percent with stay: 0.3316
 	Win percent with change: 0.6684
 

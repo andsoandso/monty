@@ -32,5 +32,5 @@ try:
 except IndexError:
     i = 10000
 
-summarize(n, k, i, *play(n, k, i))
+summarize(n, k, *play(n, k, i))
 

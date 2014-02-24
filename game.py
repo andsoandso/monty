@@ -23,7 +23,7 @@ def play(n, k, i):
     -------
 	>>> n = 3; k = 1; i = 10000
 	>>> # 3 doors, 1 reveal, 10000 iterations
-	>>> summarize(n, k, i, *play(n, k, i))
+	>>> summarize(n, k, *play(n, k, i))
 	Of 3 doors 1 were opened.
 	Win percent with stay: 0.3316
 	Win percent with change: 0.6684
@@ -67,7 +67,7 @@ def play(n, k, i):
     return stay, change
 
 
-def summarize(n, k, i, stay, change):
+def summarize(n, k, stay, change):
     """Summarize the results from playing the game.
     
     Parameters
@@ -83,6 +83,10 @@ def summarize(n, k, i, stay, change):
     change: list
         The binomial wins and losses if the contestant changed
     """
+    
+    i = len(stay)
+    if i != len(change):
+        raise ValueError("stay and change must be the same length")
     
     if k < 2:
         print("Of {0} doors {1} was opened.".format(n, k))

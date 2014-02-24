@@ -84,7 +84,11 @@ def summarize(n, k, i, stay, change):
         The binomial wins and losses if the contestant changed
     """
     
-    print("Of {0} doors {1} were opened.".format(n, k))
+    if k < 2:
+        print("Of {0} doors {1} was opened.".format(n, k))
+    else:
+        print("Of {0} doors {1} were opened.".format(n, k))
+
     print("Win percent with stay: {0}".format(sum(stay) / float(i)))
     print("Win percent with change: {0}".format(sum(change) / float(i)))
     

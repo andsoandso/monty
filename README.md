@@ -1,9 +1,10 @@
-A python module and program (see ./bin/monty.py) for playing the Monty hall game with `n` doors and `k` reveals.
+A python module and program (see ./bin/monty.py) for playing the (fucking not-at-all-intuitive) Monty hall game with `n` doors and `k` reveals.
 
-Install to a location on your python path by
+---
 
 	git clone https://github.com/andsoandso/monty.git
 	
+Gets you the code.
 
 # Interactive use
 
